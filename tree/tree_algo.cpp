@@ -13,7 +13,10 @@ int main(){
 	vector<int> inOrder(INORDER, INORDER+ sizeof(INORDER)/sizeof(int));
 
 	struct node *root = createTree(preOrder, inOrder);
-
-	printPostOrder(root);
-	cout <<"Hello world"<<endl;
+	if(root == NULL){
+		cout<<"error while creating tree\n";
+	}
+	
+	cout<<"\n post order traversal: "<<endl;
+	postOrderTraversal(root);
 }
